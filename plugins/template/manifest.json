@@ -1,14 +1,9 @@
 {
-    "name": "Template Plugin",
-    "description": "A plugin for use as a template.",
-    "authors": [
-        {
-            "name": "You!",
-            "id": "YOUR_ID_HERE"
-        }
-    ],
-    "main": "src/index.ts",
-    "vendetta": {
-        "icon": "ic_badge_staff"
-    }
+  "name": "Larp",
+  "description": "Badge & username spoofer (client-side only)",
+  "authors": [{ 
+    "name": "nasophilia",
+    "id": "1514682125205635258"
+  }],
+  "main": "index.js"
 }

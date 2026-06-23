@@ -1486,24 +1486,13 @@
     );
   }
 
-  return {
+    module.exports = {
     onLoad: function () {
-      larpUnpatchAll();
-      try {
-        warmLarpIconAssetCache();
-      } catch (_wm) {}
-      try {
-        showToast("[Larp] " + LARP_UI_TAG + " enabled", getAssetIDByName("Check"));
-      } catch (_) {}
-      patchUsername();
-      patchSnowflakeConvertersForAccountDate();
-      patchUserProfileRecordMemberSince();
-      patchBadges();
-      patchBadgeIconsViaJsx();
+      ...
     },
     onUnload: function () {
       larpUnpatchAll();
     },
     settings: Settings
   };
-})()
+})();

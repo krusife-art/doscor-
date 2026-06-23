@@ -1,5 +1,5 @@
 (function () {
-  var vendetta = typeof bunny !== "undefined" ? bunny : typeof vendetta !== "undefined" ? vendetta : window;
+var vendetta = globalThis.bunny || globalThis.vendetta || bunny;
   "use strict";
 
   var LARP_UI_TAG = "v11.1.5";
@@ -1486,13 +1486,24 @@
     );
   }
 
-    module.exports = {
+  return {
     onLoad: function () {
-      ...
+      larpUnpatchAll();
+      try {
+        warmLarpIconAssetCache();
+      } catch (_wm) {}
+      try {
+        showToast("[Larp] " + LARP_UI_TAG + " enabled", getAssetIDByName("Check"));
+      } catch (_) {}
+      patchUsername();
+      patchSnowflakeConvertersForAccountDate();
+      patchUserProfileRecordMemberSince();
+      patchBadges();
+      patchBadgeIconsViaJsx();
     },
     onUnload: function () {
       larpUnpatchAll();
     },
     settings: Settings
   };
-})();
+})()

@@ -1,0 +1,9 @@
+{
+ "name": "Larp",
+ "description": "Badge & username spoofer (client-side only)",
+ "authors": [{ 
+   "name": "nasophilia",
+   "id": "1514682125205635258"
+ }],
+ "main": "index.js"
+}

@@ -1,5 +1,5 @@
 (function () {
-  var vendetta = typeof bunny !== "undefined" ? bunny : typeof vendetta !== "undefined" ? vendetta : window;
+var vendetta = globalThis.bunny || globalThis.vendetta || bunny;
   "use strict";
 
   var LARP_UI_TAG = "v11.1.5";

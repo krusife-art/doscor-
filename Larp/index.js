@@ -1,4 +1,5 @@
 (function () {
+  var vendetta = bunny;
   "use strict";
 
   var LARP_UI_TAG = "v11.1.5";
